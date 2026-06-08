@@ -150,7 +150,7 @@ export default function Locations() {
               className="font-display text-4xl md:text-5xl font-700 leading-tight mb-6 text-brand-navy"
             >
               Strategically placed{' '}
-              <span className="text-brand-sky">across India.</span>
+              <span className="text-brand-sky">across India</span>
             </motion.h2>
 
             <motion.p

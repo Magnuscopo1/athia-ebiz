@@ -47,14 +47,18 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <span className="font-display font-700 text-white text-xl leading-none block tracking-wide">Atya</span>
-                <span className="text-white/50 text-[11px] font-body tracking-widest uppercase block mt-1">Ebiz Solutions</span>
+                <span className="font-display font-extrabold text-white text-2xl leading-none block tracking-wider uppercase">
+                  ATYA
+                </span>
+                <span className="font-display font-bold text-white text-[12px] tracking-widest block mt-1.5 uppercase">
+                  EBIZ SOLUTIONS
+                </span>
               </div>
             </div>
             
-            {/* Tagline: Balanced combination mimicking the hero headline gradient */}
+            {/* Tagline */}
             <p className="font-body text-base font-600 text-white leading-snug mb-3">
-               Warehouse to workforce,<br /> 
+              Warehouse to workforce,<br /> 
               <span className="bg-gradient-to-r from-brand-blue-light via-brand-cyan to-white bg-clip-text text-transparent font-700">
                 we enable your growth!
               </span>

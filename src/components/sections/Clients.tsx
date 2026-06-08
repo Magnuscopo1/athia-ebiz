@@ -49,7 +49,7 @@ export default function Clients() {
           Trusted by{' '}
           <span className="text-brand-blue">leading </span>
           <span className="text-brand-sky">brands</span>{' '}
-          across India.
+          across India
         </motion.h2>
 
         <motion.p

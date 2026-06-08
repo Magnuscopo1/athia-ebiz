@@ -146,7 +146,7 @@ export default function HRServices() {
             className="font-display text-4xl md:text-5xl font-extrabold leading-tight max-w-xl text-brand-navy"
           >
             Build a team that{' '}
-            <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">scales with you.</span>
+            <span className="bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent">scales with you</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}

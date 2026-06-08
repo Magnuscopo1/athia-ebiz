@@ -58,13 +58,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/50 via-transparent to-brand-navy-dark/40 md:from-brand-navy-dark/90 md:to-brand-navy-dark/40" />
       
       {/* Dynamic Ambient Blur Glow */}
-      <div className="absolute -top-32 -right-32 w-[32rem] h-[32rem] md:w-[45rem] h-[45rem] bg-brand-cyan/10 rounded-full blur-[120px] md:blur-[160px] pointer-events-none" />
+      <div className="absolute -top-32 -right-32 w-[32rem] h-[32rem] md:w-[45rem] md:h-[45rem] bg-brand-cyan/10 rounded-full blur-[120px] md:blur-[160px] pointer-events-none" />
 
       {/* Main Content Area */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 md:pt-36 pb-12 md:pb-20 min-h-screen flex flex-col justify-start md:justify-center">
         <div className="max-w-2xl lg:max-w-3xl">
           
-          {/* Tagline Pre-header — UPDATED: Linked to the matching primary logo brand color */}
+          {/* Tagline Pre-header */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Hero() {
             className="inline-flex flex-col gap-1.5 mb-5 md:mb-7 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
           >
             <span className="block font-body text-lg sm:text-xl md:text-xl font-black uppercase tracking-[0.1em] text-brand-blue-light leading-tight">
-             WAREHOUSE TO WORKFORCE,
+              WAREHOUSE TO WORKFORCE,
             </span>
             <span className="block font-body text-base sm:text-lg md:text-lg font-black uppercase tracking-[0.08em] text-brand-blue-light leading-tight mt-0.5">
               WE ENABLE YOUR GROWTH!
@@ -86,9 +86,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] sm:leading-[1.05] mb-5 text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
           >
-            Scale Your Brand.<br className="hidden sm:block" />
+            Scale Your Brand,<br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-brand-blue-light via-brand-cyan to-white bg-clip-text text-transparent">
-              Skip the Chaos.
+              Skip the Chaos
             </span>
           </motion.h1>
 
@@ -112,14 +112,14 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-dark to-brand-blue-light text-white font-body font-600 text-base shadow-lg shadow-brand-blue/30 hover:opacity-95 transition-all duration-200"
+              className="group flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-dark to-brand-blue-light text-white font-body font-semibold text-base shadow-lg shadow-brand-blue/30 hover:opacity-95 transition-all duration-200"
             >
               Start Your Journey
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#ecommerce"
-              className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/25 text-white font-body font-500 text-base hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
+              className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-white/25 text-white font-body font-medium text-base hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
             >
               Explore Services
             </a>

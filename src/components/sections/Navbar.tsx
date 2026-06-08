@@ -25,7 +25,10 @@ export default function Navbar() {
   }, [])
 
   const wordmarkClr = scrolled ? 'text-brand-navy' : 'text-white'
-  const subClr = scrolled ? 'text-brand-muted' : 'text-brand-cyan'
+  
+  // Base text coloring
+  const subClr = scrolled ? 'text-brand-blue font-black' : 'text-brand-cyan font-black'
+  
   const linkClr = scrolled
     ? 'text-brand-navy/70 hover:text-brand-blue font-semibold'
     : 'text-white/80 hover:text-white font-medium'
@@ -44,7 +47,7 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-          {/* Logo Branding — BOLD & BALANCED */}
+          {/* Logo Branding */}
           <a href="#" className="flex items-center gap-3.5 group shrink-0">
             <div className="w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-md bg-white p-0.5 transition-transform duration-300 group-hover:scale-105 shadow-sm">
               <Image
@@ -56,14 +59,20 @@ export default function Navbar() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              {/* REDUCED: text-xl mobile, text-2xl tablet, text-3xl desktop — still bold */}
+            <div className="flex flex-col justify-center">
               <span className={`font-display font-black text-xl md:text-2xl lg:text-3xl tracking-wider leading-none transition-colors duration-300 ${wordmarkClr}`}>
-                Atya
+                ATYA
               </span>
-              {/* Subtext slightly scaled back */}
-              <span className={`text-[12.5px] md:text-xs lg:text-sm font-body font-black tracking-[0.2em] uppercase transition-colors duration-300 mt-1 leading-none ${subClr}`}>
-                Ebiz Solutions
+              
+              {/* UPDATED: Added a bold text-stroke outline border exclusively on mobile views, removing it on desktop (md:[-webkit-text-stroke:0px]) */}
+              <span 
+                className={`text-[12px] sm:text-[13px] md:text-xs lg:text-sm tracking-[0.22em] uppercase transition-colors duration-300 mt-[3px] md:-mt-[2px] leading-none ${subClr}`}
+                style={{
+                  WebkitTextStroke: scrolled ? '0.5px #0a2540' : '0.5px #06b6d4',
+                  fontStyle: 'normal'
+                }}
+              >
+                EBIZ SOLUTIONS
               </span>
             </div>
           </a>
@@ -86,7 +95,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#contact"
-              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-blue-dark to-brand-blue-light text-white font-body font-600 text-sm tracking-wide shadow-md shadow-brand-blue/20 hover:opacity-95 hover:shadow-lg transition-all duration-200"
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-blue-dark to-brand-blue-light text-white font-body font-semibold text-sm tracking-wide shadow-md shadow-brand-blue/20 hover:opacity-95 hover:shadow-lg transition-all duration-200"
             >
               Get Started
             </a>

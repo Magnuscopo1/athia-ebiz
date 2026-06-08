@@ -213,9 +213,9 @@ export default function WhyUs() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display text-4xl md:text-5xl font-700 leading-tight mb-10 max-w-2xl text-brand-navy"
         >
-          Not just a vendor.{' '}
+          Not just a vendor,{' '}
           <span className="text-brand-blue">A real </span>
-          <span className="text-brand-sky">business partner.</span>
+          <span className="text-brand-sky">business partner</span>
         </motion.h2>
 
         {/* Audience tab switcher */}

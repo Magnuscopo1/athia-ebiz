@@ -218,7 +218,7 @@ export default function Contact() {
               className="font-display text-4xl md:text-5xl font-700 leading-tight mb-6 text-brand-navy"
             >
               Ready to scale?{' '}
-              <span className="text-brand-sky">Let&rsquo;s talk.</span>
+              <span className="text-brand-sky">Let&rsquo;s talk</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

@@ -183,7 +183,7 @@ export default function EcommerceServices() {
               <span className="text-brand-cyan text-sm font-body tracking-widest uppercase font-bold">E-Commerce Suite</span>
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-extrabold leading-tight max-w-xl text-white">
-              From listing to <span className="bg-gradient-to-r from-brand-blue-light to-brand-cyan bg-clip-text text-transparent">last-mile dispatch</span>.
+              From listing to <span className="bg-gradient-to-r from-brand-blue-light to-brand-cyan bg-clip-text text-transparent">last-mile dispatch</span>
             </h2>
           </div>
           <p className="font-body text-white/60 max-w-sm leading-relaxed mb-2">

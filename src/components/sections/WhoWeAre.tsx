@@ -56,7 +56,7 @@ export default function WhoWeAre() {
               <span className="bg-gradient-to-r from-brand-blue via-brand-blue-light to-brand-cyan bg-clip-text text-transparent">
                 back-end partner
               </span>{' '}
-              for scaling brands.
+              for scaling brands
             </motion.h2>
 
             <motion.p

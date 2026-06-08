@@ -43,7 +43,6 @@ const directors = [
       'Known for his practical leadership approach and strong execution capability, Ajay has led large-scale HR transformation initiatives including HR digitalization, policy governance, talent acquisition, compensation structuring, compliance management, employee engagement, and multi-location administration management. He has consistently partnered with promoters, CXOs, and business leaders to align workforce strategy with operational and commercial priorities.',
       'Prior to joining Atya Ebiz Solutions LLP, Ajay held senior leadership positions across leading organizations, where he managed end-to-end HR operations, administration, facilities management, compliance frameworks, vendor governance, and organizational capability development.',
       'With a strong blend of strategic HR leadership and operational management expertise, Ajay brings a solution-oriented and business-focused perspective to organizational growth. His vision is to help businesses build sustainable, process-driven, and high-performing work environments that support long-term scalability and operational excellence.',
-      'At Atya, he leads HR consulting, recruitment, and workforce planning by helping startups, B2C/D2C brands, SMEs, and growing organizations establish structured hiring, performance frameworks, and people operations that scale with the business.',
     ],
   },
 ]
@@ -101,7 +100,7 @@ export default function Leadership() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl md:text-5xl font-700 leading-tight max-w-2xl text-brand-navy"
           >
-            The team <span className="text-brand-blue">building</span> <span className="text-brand-sky">Atya.</span>
+            The team <span className="text-brand-blue">building</span> <span className="text-brand-sky">Atya</span>
           </motion.h2>
 
           {/* Counter + arrows */}
