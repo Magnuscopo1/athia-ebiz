@@ -268,7 +268,7 @@ export default function Contact() {
               <div className="relative card-paper rounded-2xl p-10 text-center">
                 <CheckCircle size={48} className="text-brand-blue mx-auto mb-4" />
                 <h3 className="font-display text-2xl font-700 text-brand-navy mb-3">Message Received!</h3>
-                <p className="font-body text-brand-muted">We&rsquo;ll get back to you within 24 hours.</p>
+                <p className="font-body text-brand-muted">We shall connect with you at the earliest</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="relative card-paper rounded-2xl p-8 space-y-5">
