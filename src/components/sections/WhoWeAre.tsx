@@ -5,11 +5,11 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const photos = [
-  { src: '/images/new1.jpeg', alt: 'Atya warehouse — inventory and storage' },
-  { src: '/images/new2.jpeg', alt: 'Atya warehouse — Gurugram' },
-  { src: '/images/warehouse-2.jpg', alt: 'Atya warehouse — picking and packing' },
-  { src: '/images/warehouse-3.jpg', alt: 'Atya warehouse — dispatch operations' },
-  { src: '/images/warehouse-1.jpg', alt: 'Atya warehouse — Gurugram' },
+  { src: '/images/warehouse-1.jpeg', alt: 'Atya warehouse — inventory and storage' },
+  { src: '/images/warehouse-2.jpeg', alt: 'Atya warehouse — Gurugram' },
+  { src: '/images/warehouse-3.jpeg', alt: 'Atya warehouse — Gurugram' },
+  { src: '/images/warehouse-4.jpg', alt: 'Atya warehouse — dispatch operations' },
+  { src: '/images/warehouse-5.jpg', alt: 'Atya warehouse — Gurugram' },
 ]
 
 const ROTATION_MS = 5000

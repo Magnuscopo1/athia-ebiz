@@ -13,6 +13,8 @@ const clients: ClientItem[] = [
   { type: 'logo', name: 'Iron Asylum', logo: '/images/Iron_Asylum_Logo__Gold_Silver-cropped_016e74d4-998f-4d04-a234-0e36ee073be1.svg' },
   { type: 'logo', name: 'Maxelon', logo: '/images/Maxelon-logo-2048x727.png', darkTile: true },
   { type: 'logo', name: 'Startek Aegis BPO', logo: '/images/clients/startek.png' },
+  { type: 'logo', name: 'Reblossom Remedies', logo: '/images/clients-logo.png' },
+  { type: 'logo', name: 'mocemsa', logo: '/images/clients-logo2.jpeg' },
   { type: 'logo', name: 'Grihveda', logo: '/images/Grihveda.jpeg' },
 ]
 

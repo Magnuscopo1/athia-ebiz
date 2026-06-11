@@ -55,7 +55,7 @@ const cities: Record<string, City> = {
     label: 'Bengaluru',
     hub: true,
     role: 'Registered Office',
-    address: 'Survey No. 133/2, V Begur Hobli, Mylasandra, Begur, Bengaluru South, Bengaluru, Karnataka, India, 560068',
+    address: 'RJV7+W2H, Mylasandra Dinne, Bettadasanapura, Mylasandra, Karnataka 560068',
   },
   gurugram: {
     lat: 28.4595,
@@ -63,7 +63,7 @@ const cities: Record<string, City> = {
     label: 'Gurugram',
     hub: true,
     role: 'North India Hub',
-    address: 'Khewat No. 424, Mustil No. 13, Killa No. 22/2, Village Kankrola, PO Bhangrola, Gurugram, Haryana, India, 122505',
+    address: '9WVC+H56, Gurugram, Haryana', 
   },
   mumbai: { lat: 19.076, lng: 72.8777, label: 'Mumbai' },
   delhi: { lat: 28.7041, lng: 77.1025, label: 'Delhi' },
@@ -166,16 +166,19 @@ export default function Locations() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch"
             >
               {hubs.map((h) => {
                 const isActive = activeHub === h.key
+                // Generates an optimized Google Search query link based on coordinate points and named address parameters
+                const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${h.label}, ${h.address}`)}`
+
                 return (
                   <div
                     key={h.label}
                     onMouseEnter={() => setActiveHub(h.key)}
                     onMouseLeave={() => setActiveHub(null)}
-                    className="relative cursor-pointer group"
+                    className="relative cursor-pointer group flex flex-col h-full"
                   >
                     {/* Refined Signature Blue & Sky Halo Gradient Ring */}
                     <div
@@ -190,25 +193,28 @@ export default function Locations() {
                       }`}
                     />
 
-                    {/* Actual Card Surface */}
+                    {/* Actual Card Surface - Forces equal layout heights */}
                     <div
-                      className={`relative flex flex-col p-5 rounded-2xl border bg-brand-paper transition-all duration-300 ${
+                      className={`relative flex flex-col p-5 rounded-2xl border bg-brand-paper transition-all duration-300 flex-1 justify-between h-full ${
                         isActive
                           ? 'border-transparent -translate-y-0.5'
                           : 'border-brand-line'
                       }`}
                     >
-                      <h3 className="font-display text-lg font-700 text-brand-navy leading-tight mb-1">{h.label}</h3>
-                      <p className="font-body text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3">{h.role}</p>
-                      {h.address && (
-                        <p className="font-body text-sm text-brand-muted leading-relaxed flex-1">{h.address}</p>
-                      )}
+                      <div>
+                        <h3 className="font-display text-lg font-700 text-brand-navy leading-tight mb-1">{h.label}</h3>
+                        <p className="font-body text-[11px] text-brand-blue uppercase tracking-widest font-medium mb-3">{h.role}</p>
+                        {h.address && (
+                          <p className="font-body text-sm text-brand-muted leading-relaxed mb-4">{h.address}</p>
+                        )}
+                      </div>
+                      
                       <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${h.lat},${h.lng}`}
+                        href={googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-1.5 mt-3 text-xs font-body font-medium text-brand-blue hover:text-brand-sky transition-colors self-start"
+                        className="inline-flex items-center gap-1.5 text-xs font-body font-medium text-brand-blue hover:text-brand-sky transition-colors self-start mt-auto pt-2"
                       >
                         View on Google Maps
                         <ExternalLink size={12} />
