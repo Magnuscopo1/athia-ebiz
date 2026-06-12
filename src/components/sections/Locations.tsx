@@ -65,7 +65,8 @@ const cities: Record<string, City> = {
     label: 'Gurugram',
     hub: true,
     role: 'North India Hub',
-    address: 'Khewat No. 424, Mustil No. 13, Killa No. 22/2, Village Kankrola, PO Bhangrola, Gurugram, Haryana 122505', 
+    address: 'Khewat No. 424, Mustil No. 13, Killa No. 22/2, Village Kankrola, PO Bhangrola, Gurugram, Haryana 122505',
+    customMapsUrl: 'https://share.google/5AODwQICewYR9src4',
   },
   mumbai: { lat: 19.076, lng: 72.8777, label: 'Mumbai' },
   delhi: { lat: 28.7041, lng: 77.1025, label: 'Delhi' },
@@ -173,7 +174,7 @@ export default function Locations() {
               {hubs.map((h) => {
                 const isActive = activeHub === h.key
                 
-                // Uses the explicit custom link if provided (e.g. Bengaluru), otherwise falls back to fallback string match query structure
+                // Prioritizes the explicit custom link if provided (e.g., Bengaluru or Gurugram)
                 const googleMapsUrl = h.customMapsUrl 
                   ? h.customMapsUrl 
                   : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${h.label}, ${h.address}`)}`
