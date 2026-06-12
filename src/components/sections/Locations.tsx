@@ -46,6 +46,7 @@ type City = {
   hub?: boolean
   role?: string
   address?: string
+  customMapsUrl?: string
 }
 
 const cities: Record<string, City> = {
@@ -55,7 +56,8 @@ const cities: Record<string, City> = {
     label: 'Bengaluru',
     hub: true,
     role: 'Registered Office',
-    address: 'RJV7+W2H, Mylasandra Dinne, Bettadasanapura, Mylasandra, Karnataka 560068',
+    address: 'Survey No. 133/2, V Begur Hobli, Mylasandra, Begur, Bengaluru South, Bengaluru, Karnataka, India 560068',
+    customMapsUrl: 'https://maps.app.goo.gl/HAB3YdLdSM8vEkNg7?g_st=ac',
   },
   gurugram: {
     lat: 28.4595,
@@ -63,7 +65,7 @@ const cities: Record<string, City> = {
     label: 'Gurugram',
     hub: true,
     role: 'North India Hub',
-    address: '9WVC+H56, Gurugram, Haryana', 
+    address: 'Khewat No. 424, Mustil No. 13, Killa No. 22/2, Village Kankrola, PO Bhangrola, Gurugram, Haryana 122505', 
   },
   mumbai: { lat: 19.076, lng: 72.8777, label: 'Mumbai' },
   delhi: { lat: 28.7041, lng: 77.1025, label: 'Delhi' },
@@ -170,8 +172,11 @@ export default function Locations() {
             >
               {hubs.map((h) => {
                 const isActive = activeHub === h.key
-                // Generates an optimized Google Search query link based on coordinate points and named address parameters
-                const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${h.label}, ${h.address}`)}`
+                
+                // Uses the explicit custom link if provided (e.g. Bengaluru), otherwise falls back to fallback string match query structure
+                const googleMapsUrl = h.customMapsUrl 
+                  ? h.customMapsUrl 
+                  : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${h.label}, ${h.address}`)}`
 
                 return (
                   <div
